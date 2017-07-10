@@ -1,0 +1,1 @@
+export {InicioComponent} from './inicio/inicio/inicio.component';
