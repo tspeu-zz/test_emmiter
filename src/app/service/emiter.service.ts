@@ -20,7 +20,7 @@ export class EmiterService {
 
 	emitirString(){	
 		this.emite.emit(this.valor);
-		console.info(`emite string valor: ${this.valor}`);
+		console.info(`emite string el valor: ${this.valor}`);
 	}
 
 	emitirNum(){

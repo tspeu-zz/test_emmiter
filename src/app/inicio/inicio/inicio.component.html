@@ -2,11 +2,17 @@
   inicio works!
 </h1>
 <form>
-  <md-select placeholder="Favorite food" [(ngModel)]="selectedValue" name="food">
-    <md-option *ngFor="let food of foods" [value]="food.value">
-      {{food.viewValue}}
+  <md-select placeholder="Favorite food" [(ngModel)]="selectedValue" 
+  name="food" #item (change)="comidaSaliendo(selectedValue)">
+    <md-option *ngFor="let food of foods" [value]="food.value"
+     >
+      {{food.viewValue}} 
     </md-option>
   </md-select>
 
   <p> Selected value: {{selectedValue}} </p>
 </form>
+
+<input type="range" min="0" max="20" [(ngModel)]="selectedNumber" step="1" 
+(change)="numSale(selectedNumber)"  />
+ <span id="range">{{selectedNumber}}</span>
